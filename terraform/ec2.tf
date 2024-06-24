@@ -44,7 +44,7 @@ resource "aws_instance" "strapi-ec2" {
   instance_type               = "t2.small"
   vpc_security_group_ids      = [aws_security_group.strapi-sg.id]
   subnet_id                   = aws_subnet.public_subnet1.id
-  key_name                    = "yn"
+  key_name                    = "ynkey"
   associate_public_ip_address = true
   user_data                   = <<-EOF
                                 #!/bin/bash
