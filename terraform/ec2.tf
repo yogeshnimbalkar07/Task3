@@ -37,7 +37,7 @@ resource "aws_security_group" "strapi-sg" {
 
 resource "aws_instance" "strapi-ec2" {
   ami                         = var.ami
-  region                      = ap-south-1
+  region                      = var.region
   instance_type               = "t2.small"
   vpc_security_group_ids      = [aws_security_group.strapi-sg.id]
   subnet_id                   = aws_subnet.public_subnet1.id
