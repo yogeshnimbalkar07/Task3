@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres:
-    image: arunrascall/strapi-postgres:development
+    image: yogi/strapi-postgres:development
     container_name: postgres-strapi
     environment:
       POSTGRES_USER: strapi
@@ -13,7 +13,7 @@ services:
     volumes:
       - /opt:/var/lib/postgsql/data
   strapi:
-    image: arunrascall/strapi:development
+    image: yogi/strapi:development
     container_name: strapi-server
     environment:
       DATABASE_CLIENT: postgres
