@@ -35,8 +35,6 @@ jobs:
         id: plan
         run: terraform plan -no-color
 
-      - name: Terraform Plan
-        run: export TF_LOG=DEBUG
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
